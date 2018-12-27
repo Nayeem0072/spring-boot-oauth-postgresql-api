@@ -19,6 +19,5 @@ Test authed API:
   http://localhost:9091/authed/test \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer b602a833-2396-43be-ad96-d5a5d09beb6a' \
-  -H 'Cache-Control: no-cache' \
-  -F access_token=843c7945-9703-48c5-98ac-3018741bad13
+  -H 'Cache-Control: no-cache' 
 ```
