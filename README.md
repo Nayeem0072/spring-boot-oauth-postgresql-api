@@ -3,10 +3,10 @@ A Spring Boot based application configured with Maven and implemented with Sprin
 Database used here is Postgresql, passwords are being hashed with BCryptPasswordEncoder.
 
 # testing APIs with cURL
-Get token:
+Get token: (Auth header is in base64(android-client:android-secret) format)
 curl -X POST \
   http://localhost:9091/oauth/token \
-  -H 'Authorization: Basic YW5kcm9pZC1jbGllbnQ6YW5kcm9pZC1zZWNyZXQ=' \ base64(android-client:android-secret)
+  -H 'Authorization: Basic YW5kcm9pZC1jbGllbnQ6YW5kcm9pZC1zZWNyZXQ=' \ 
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -H 'Accept: application/json' \
