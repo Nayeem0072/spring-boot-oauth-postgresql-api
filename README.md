@@ -4,7 +4,8 @@ Database used here is Postgresql, passwords are being hashed with BCryptPassword
 
 # Testing APIs with cURL
 Get token: (Auth header is in ```base64("android-client":"android-secret")``` format)
-```curl -X POST \
+```
+  curl -X POST \
   http://localhost:9091/oauth/token \
   -H 'Authorization: Basic YW5kcm9pZC1jbGllbnQ6YW5kcm9pZC1zZWNyZXQ=' \ 
   -H 'Cache-Control: no-cache' \
@@ -15,7 +16,8 @@ Get token: (Auth header is in ```base64("android-client":"android-secret")``` fo
   -F password=123456
 ```
 Test authed API:
-```curl -X GET \
+```
+  curl -X GET \
   http://localhost:9091/authed/test \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer b602a833-2396-43be-ad96-d5a5d09beb6a' \
